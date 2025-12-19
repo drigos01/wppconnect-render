@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "postinstall": "npx puppeteer browsers install chromium",
+    "postinstall": "npx puppeteer browsers install chrome-headless-shell",
     "start": "node server.js"
   },
   "dependencies": {
