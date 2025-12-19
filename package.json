@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "npx puppeteer browsers install chromium"
+    "postinstall": "npx puppeteer install chrome-headless-shell"
   },
   "dependencies": {
     "@wppconnect-team/wppconnect": "^1.35.0",
