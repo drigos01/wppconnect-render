@@ -1,5 +1,6 @@
 import express from 'express';
 import wppconnect from '@wppconnect-team/wppconnect';
+import puppeteer from 'puppeteer';
 
 const app = express();
 const PORT = process.env.PORT || 10000;
@@ -25,11 +26,14 @@ wppconnect.create({
   },
 
   puppeteerOptions: {
+    executablePath: puppeteer.executablePath(),
     headless: true,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage'
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+      '--single-process'
     ]
   }
 })
