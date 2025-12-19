@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "npx puppeteer browsers install chromium"
   },
   "dependencies": {
     "@wppconnect-team/wppconnect": "^1.35.0",
